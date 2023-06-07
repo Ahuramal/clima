@@ -4,7 +4,7 @@ class Location {
   late double latitude;
   late double longitude;
 
-  getCurrentLocation() async {
+  Future<void> getCurrentLocation() async {
     try {
       LocationPermission permission =
           await Geolocator.checkPermission() == LocationPermission.denied
